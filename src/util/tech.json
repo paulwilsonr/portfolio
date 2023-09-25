@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "name":"HTML5",
+        "img": "src/assets/html5.svg",
+        "years": 2
+    },
+    {
+        "id": 2,
+        "name": "CSS3",
+        "img": "src/assets/icons8-css3-96.png",
+        "years": 2
+    },
+    {
+        "id": 3,
+        "name": "Javascript",
+        "img": "src/assets/icons8-javascript-96.png",
+        "years": 2
+    },
+    {
+        "id": 4,
+        "name": "Typescript",
+        "img": "src/assets/icons8-typescript-96.png",
+        "years": 1
+    },
+    {
+        "id": 5,
+        "name": "React",
+        "img": "src/assets/icons8-react-160.png",
+        "years": 1
+    },
+    {
+        "id": 6,
+        "name": "Git",
+        "img": "src/assets/icons8-git-96.png",
+        "years": 2
+    },
+    {
+        "id": 7,
+        "name": "Jest",
+        "img": "src/assets/file-type-jest.svg",
+        "years": 1
+    },
+    {
+        "id": 8,
+        "name": "Webpack",
+        "img": "src/assets/icons8-webpack-a-module-bundler.-its-main-purpose-is-to-bundle-javascript-files-for-usage-in-a-browser-96.png",
+        "years": 2
+    },
+    {
+        "id": 9,
+        "name": "NPM",
+        "img": "src/assets/icons8-npm-96.png",
+        "years": 2
+    }
+    
+]

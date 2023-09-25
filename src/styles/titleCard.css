@@ -1,0 +1,46 @@
+.titleCard {
+    width: 100vw;
+    height: 500px;
+    text-align: center;
+    /* background-image: url('src/assets/wavy_background_4.jpg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat; */
+}
+
+.backgroundImage {
+    height: 500px;
+    opacity: 75%;
+    filter: sepia(100%);
+    position: absolute;
+    right: 30vw;
+    top: 40px;
+    z-index: -1;
+}
+
+.title {
+    font-size: 60px;
+}
+#paul {
+    position: relative;
+    top: 60px;
+    right: 0px;
+}
+
+#wilson {
+    position: relative;
+    top: 120px;
+    right: 20px;
+}   
+
+#web {
+    position: relative;
+    top: 180px;
+    right: 40px;
+}
+
+#dev {
+    position: relative;
+    top: 240px;
+    right: 60px;
+}

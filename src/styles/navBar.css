@@ -1,0 +1,17 @@
+.navBar {
+    background-color: var(--black);
+    display: flex;
+    justify-content: end;
+    padding: 10px 25px;
+}
+
+.navLink {
+    color: var(--off-white);
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.currentSection {
+    color: var(--white);
+    border-bottom: 2px var(--white) solid;
+}
