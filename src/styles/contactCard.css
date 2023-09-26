@@ -1,0 +1,68 @@
+.contactCard {
+    margin: 120px 40px;
+    border-top: 1px var(--off-white) solid;
+    padding-left: 40px;
+    display: grid;
+    grid-template-rows: 82px 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
+}
+
+.contactTitle {
+    grid-area: 1/1/2/3;
+}
+
+.githubIcon {
+    grid-area: 2/1/3/2;
+    align-self: center;
+}
+
+.linkedInIcon {
+    grid-area: 3/1/4/2;
+}
+
+.emailForm {
+    grid-area: 2/2/4/3;
+    display: flex;
+    flex-direction: column;
+}
+
+#name {
+    width: 300px;
+    padding: 10px;
+}
+
+#email {
+    width: 300px;
+    padding: 10px;
+}
+
+#message {
+    width: 70%;
+    height: 150px;
+    padding: 10px;
+}
+
+.emailInput {
+    margin: 20px;
+}
+
+.sendArrow {
+    width: 20px;
+    transform: rotate(-45deg);
+    margin: 0;
+    transition: all .3s;
+}
+
+.sendEmailButton:hover > .sendArrow {
+    transform: rotate(0deg);
+}
+.sendEmailButton {
+    width: 100px;
+    align-self: start;
+    margin-left: 20px;
+}
+
+.contactLink {
+    width: 30px;
+    margin: 10px 0 10px 80%;
+}

@@ -22,9 +22,10 @@ function Project (props: Props) {
       onMouseLeave={() => setIsSelected(false)}
     >
       
-      {isSelected ? (
+      
         <>
         <img className='projectScreenshot selected' src={project.img} />
+        <div className={isSelected ? 'projectInfoContainer selected' : 'projectInfoContainer'}>
           <p className='projectName'>{project.name}</p>
           <p className='projectDescription'>{project.description}</p>
           <div className='projectTechUsedContainer'>
@@ -33,10 +34,9 @@ function Project (props: Props) {
           })}</div>
           <a className='projectLink live' href={project.live}>Live</a>
           <a className='projectLink github' href={project.github}>Github</a>
+          </div>
         </>
-      ) : (
-        <img className='projectScreenshot' src={project.img} />
-      )}
+      
     </div>
   )
 }

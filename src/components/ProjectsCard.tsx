@@ -15,7 +15,7 @@ interface Project {
 function ProjectsCard () {
     return (
         <section id="projects" className="projectsCard">
-            <h2>Projects</h2>
+            <h2 className="sectionTitle">Projects</h2>
             <div className="projectsContainer" >
                 {projectData.map((project: Project) => {
                     return <Project key={project.id} project={project} />

@@ -18,7 +18,7 @@
 
 span {
     height: 0;
-    animation: .5s ease-out .5s 1 rise;
+    animation: .5s ease-out .5s 1 lower;
     overflow: hidden;
     animation-fill-mode: forwards;}
 
@@ -48,7 +48,7 @@ span {
     grid-area: 4/7/5/9;
 }
 
-@keyframes rise {
+@keyframes lower {
     0% {
         height: 0;
     }
