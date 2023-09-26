@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "CV Creator App",
+        "img": "src/assets/CVApp.png",
+        "techUsed": ["React", "CSS", "HTML5"],
+        "live": "https://venerable-tarsier-3d0680.netlify.app/",
+        "github": "https://github.com/paulwilsonr/CVApp",
+        "description": "An app that allows users to enter their data into the forms and create their own Resume."
+    },
+    {
+        "id": 2,
+        "name": "Store Website",
+        "img": "src/assets/FakeStore.png",
+        "techUsed": ["Vite", "React Router", "CSS"],
+        "live": "https://main--peaceful-caramel-10188d.netlify.app/",
+        "github": "https://github.com/paulwilsonr/shoppingCart",
+        "description": "A front-end store built with Vite. The store allows users to browse, add and remove items from their cart."
+    }
+]

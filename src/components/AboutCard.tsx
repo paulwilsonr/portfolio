@@ -1,18 +1,19 @@
 import TechIcon from "./TechIcon"
 import techData from '../util/tech.json'
+import '../styles/aboutCard.css'
 
-type Item = {
+interface Item {
     id: number,
     name: string,
     img: string,
-    years: string
+    years: number
 }   
 
 
 
 function AboutCard () {
       return (
-    <div className='aboutCard'>
+    <section className='aboutCard' id="about">
       <h2>About</h2>
       <p>
         Welcome to my corner of the web! I'm Paul Wilson, a passionate and
@@ -25,10 +26,10 @@ function AboutCard () {
         <div className="techIconContainer">
             {techData.map((item: Item) => {
 
-                return <TechIcon item={item} />;
+                return <TechIcon key={item.id} item={item} />
             })}
         </div>
-    </div>
+    </section>
   )
 }
 

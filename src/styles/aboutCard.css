@@ -1,0 +1,12 @@
+.aboutCard {
+    
+}
+
+.techIconContainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.techIcon {
+    width: 75px;
+}
