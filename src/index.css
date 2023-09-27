@@ -61,3 +61,17 @@
   font-size: 35px;
   font-weight: 200;
 }
+
+.pointer {
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+}
+
+.footerLink {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 18px;
+}

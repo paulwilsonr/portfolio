@@ -3,10 +3,12 @@ import NavBar from './components/NavBar'
 import TitleCard from './components/TitleCard'
 import ProjectsCard from './components/ProjectsCard'
 import ContactCard from './components/ContactCard'
-import { useEffect, useRef } from 'react'
+import {  useRef } from 'react'
 
 function App () {
-  useEffect(() => {
+
+  const bgChanger = useRef();
+
     window.onscroll = function () {
       const scroll: number = window.scrollY
       const htmlElement = document.documentElement
@@ -21,22 +23,19 @@ function App () {
       )
 
       const scrollPercent = (1 - scroll / height + 0.2).toFixed(3)
-      document.querySelector(
-        '.backgroundChanger'
-      ).style.backgroundColor = `rgba(0, 0, 0, ${scrollPercent})`
+      bgChanger.current.style.backgroundColor = `rgba(0, 0, 0, ${scrollPercent})`
     }
-  })
 
   return (
     <div>
       <NavBar />
       <TitleCard />
-      <div className='backgroundChanger'>
+      <div ref={bgChanger} className='backgroundChanger'>
         <AboutCard />
         <ProjectsCard />
         <ContactCard />
         <footer>
-          <p>Created by Paul Wilson</p>
+          <p>Find the code for this page <a className='footerLink' href='https://github.com/paulwilsonr/portfolio'>here</a></p>
         </footer>
       </div>
     </div>
