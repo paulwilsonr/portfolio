@@ -3,7 +3,8 @@
     height: 600px;
     text-align: center;
     padding-top: 20px;
-   
+    padding-bottom: 120px;
+   background-color: var(--black);
 }
 
 .backgroundImage {
@@ -13,14 +14,16 @@
     position: absolute;
     right: 30vw;
     top: 40px;
-    z-index: -1;
+    z-index: 0;
 }
 
 span {
     height: 0;
     animation: .5s ease-out .5s 1 lower;
     overflow: hidden;
-    animation-fill-mode: forwards;}
+    animation-fill-mode: forwards;
+    z-index: 2;
+}
 
 .title {
     width: 100%;

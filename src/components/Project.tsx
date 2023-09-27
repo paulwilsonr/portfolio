@@ -14,9 +14,9 @@ type Props = {
 function Project (props: Props) {
   const [isSelected, setIsSelected] = useState(false)
   const project = props.project
+  let techId = 0;
   return (
     <div
-    //   className={isSelected ? 'project selected' : 'project'}
     className='project'
       onMouseEnter={() => setIsSelected(true)}
       onMouseLeave={() => setIsSelected(false)}
@@ -30,7 +30,8 @@ function Project (props: Props) {
           <p className='projectDescription'>{project.description}</p>
           <div className='projectTechUsedContainer'>
           {project.techUsed.map((tech) => {
-            return <p className='projectTechUsed'>{tech}</p>
+            techId= techId+1;
+            return <p key={techId} className='projectTechUsed'>{tech}</p>
           })}</div>
           <a className='projectLink live' href={project.live}>Live</a>
           <a className='projectLink github' href={project.github}>Github</a>

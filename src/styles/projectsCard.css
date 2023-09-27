@@ -12,6 +12,7 @@
     overflow: hidden;
     border: 2px var(--off-white) solid;
     border-radius: 10px;
+    z-index: 5;
 }
 
 
