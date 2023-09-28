@@ -1,48 +1,57 @@
-import { ChangeEvent, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import '../styles/contactCard.css'
 
 function ContactCard () {
   const [emailSent, setEmailSent] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [disappear, setDisappear] = useState(false)
   const [formValues, setFormValues] = useState({
     name: '',
     email: '',
     message: ''
   })
-  const form = useRef()
+  const form = useRef<HTMLFormElement>(null)
 
-  const sendEmail = (e: ChangeEvent<HTMLInputElement>) => {
+  const sendEmail = (e: React.SyntheticEvent) => {
     e.preventDefault()
+    setSending(true)
+    if (form.current !== null) {
+      emailjs
+        .sendForm(
+          'service_5f29kc8',
+          'template_6f1necq',
+          form.current,
+          'bBdFNunfFK0ALg1_l'
+        )
+        .then(
+          result => {
+            if (result.status === 200) {
+              setDisappear(true)
+              setTimeout(() => {
+                setEmailSent(true)
+                setSending(false)
+              }, 500)
 
-    emailjs
-      .sendForm(
-        'service_5f29kc8',
-        'template_6f1necq',
-        form.current,
-        'bBdFNunfFK0ALg1_l'
-      )
-      .then(
-        result => {
-          if (result.status === 200) {
-            setEmailSent(true)
-            setFormValues({
+              setFormValues({
                 name: '',
                 email: '',
                 message: ''
               })
+            }
+          },
+          error => {
+            console.log(error)
           }
-        },
-        error => {
-          console.log(error)
-        }
-      )
+        )
+    }
   }
 
   function handleChange (newValue: string, keyName: string) {
     const tempValues = { ...formValues }
-    tempValues[keyName] = newValue
+    tempValues[keyName as keyof typeof tempValues] = newValue
     setFormValues(tempValues)
-    console.log(formValues)
+    
   }
   return (
     <section id='contact' className='contactCard '>
@@ -51,19 +60,23 @@ function ContactCard () {
         <a href='https://github.com/paulwilsonr'>
           <img
             className='contactLink githubIcon'
-            src='src/assets/github-mark-white.png'
+            src='/assets/github-mark-white.png'
             alt='github'
           ></img>
         </a>
         <a href='https://www.linkedin.com/in/pwilson88/'>
           <img
             className='contactLink linkedInIcon'
-            src='src/assets/LI-In-Bug.png'
+            src='/assets/LI-In-Bug.png'
             alt='LinkedIn'
           ></img>
         </a>
       </div>
-      <form ref={form} onSubmit={sendEmail} className='emailForm'>
+      <form
+        ref={form}
+        onSubmit={(e: React.SyntheticEvent) => sendEmail(e)}
+        className='emailForm'
+      >
         <input
           className='emailInput'
           name='from_name'
@@ -96,10 +109,34 @@ function ContactCard () {
             handleChange(e.target.value, 'message')
           }}
         />
-        <button type='submit' value='Send' className='sendEmailButton pointer'>
-          Send{' '}
-          <img className='sendArrow' src='src/assets/right-arrow2.png'></img>
-        </button>
+        {emailSent ? (
+          <div className='green sentButton'>
+            <p>Sent</p>
+            <img className='sentCheck' src='/assets/checkmark.png'></img>
+          </div>
+        ) : (
+          <button
+            type='submit'
+            value='Send'
+            className={
+              emailSent
+                ? 'sendEmailButton pointer green'
+                : 'sendEmailButton pointer'
+            }
+          >
+            Send
+            <img
+              className={
+                sending
+                  ? disappear
+                    ? 'sendArrow sending disappear'
+                    : 'sendArrow sending'
+                  : 'sendArrow'
+              }
+              src='/assets/right-arrow2.png'
+            ></img>
+          </button>
+        )}
       </form>
     </section>
   )

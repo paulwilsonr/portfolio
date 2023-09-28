@@ -32,6 +32,7 @@
   --white: #fff;
   --black: #000;
   --blue: #1e81b0;
+  --green: #33d17a;
   box-sizing: border-box;
   font-family: 'Roboto', snas-serif;
 
@@ -68,6 +69,7 @@
 
 footer {
   text-align: center;
+  padding-bottom: 15px;
 }
 
 .footerLink {

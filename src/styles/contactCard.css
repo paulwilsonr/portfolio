@@ -53,6 +53,9 @@
     transform: rotate(-45deg);
     margin: 0;
     transition: all .3s;
+    margin-left: 3px;
+    position: relative;
+    top: 5px;
 }
 
 .sendEmailButton:hover > .sendArrow {
@@ -78,4 +81,78 @@
 .contactLink {
     width: 30px;
     margin-bottom: 40px;    
+}
+
+.sending {
+    animation: rotate 1s linear infinite forwards;
+}
+
+.disappear {
+    animation: disappear .5s linear 2s 1 forwards;
+}
+
+.sentCheck {
+    width: 15px;
+    margin: 0;
+    animation: appear .5s linear  1 forwards;
+    margin-left: 8px;
+    display: inline;
+    position: relative;
+    top: 0px
+}
+
+.green {
+    color: var(--green);
+}
+
+.sentButton {
+    margin-left: 20px;
+    width: 100px;
+    text-align: center;
+    margin-top: 4px;
+}
+
+.sentButton > p {
+    display: inline;
+    
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes appear {
+    from {
+        height: 0;
+        width: 0;
+    }
+    to {
+        height: 15px;
+        width: 15px;
+    }
+}
+
+@keyframes disappear {
+    from {
+        height: 20px;
+        width: 20px;
+    }
+    to {
+        height: 0;
+        width: 0;
+    }
+}
+
+@keyframes textAppear {
+    from {
+        width: 0;
+    }
+    to {
+        width: 60px;
+    }
 }
