@@ -1,6 +1,5 @@
 .aboutCard {
     margin: 0px 40px 120px 40px;
-    border-top: 1px var(--off-white) solid;
     padding-left: 40px;
     z-index: 10;
 }
@@ -54,7 +53,7 @@
 .aboutText {
     text-align: center;
     width: 60%;
-    margin: 0 auto;
+    margin: 40px auto;
     font-size: 20px;
     font-weight: 200;
 } 
@@ -71,8 +70,6 @@
     .aboutCard {
         margin: 0;
         margin-bottom: 120px;
-        border-top: none;
-
     }
     .aboutText {
         width: 90%;

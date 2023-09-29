@@ -1,9 +1,8 @@
 .contactCard {
     margin: 120px 40px;
-    border-top: 1px var(--off-white) solid;
     padding-left: 40px;
     display: grid;
-    grid-template-rows: 82px 1fr;
+    grid-template-rows: 120px 1fr;
     grid-template-columns: 1fr 1fr;
 }
 
@@ -67,9 +66,10 @@
     top: 5px;
 }
 
-.sendEmailButton:hover > .sendArrow {
+.sendEmailButton:hover>.sendArrow {
     transform: rotate(0deg);
 }
+
 .sendEmailButton {
     width: 100px;
     align-self: start;
@@ -90,7 +90,7 @@
 
 .contactLink {
     width: 30px;
-    margin-bottom: 40px;    
+    margin-bottom: 40px;
 }
 
 .sending {
@@ -104,7 +104,7 @@
 .sentCheck {
     width: 15px;
     margin: 0;
-    animation: appear .5s linear  1 forwards;
+    animation: appear .5s linear 1 forwards;
     margin-left: 8px;
     display: inline;
     position: relative;
@@ -122,15 +122,16 @@
     margin-top: 4px;
 }
 
-.sentButton > p {
+.sentButton>p {
     display: inline;
-    
+
 }
 
 @keyframes rotate {
     from {
         transform: rotate(0deg)
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -141,6 +142,7 @@
         height: 0;
         width: 0;
     }
+
     to {
         height: 15px;
         width: 15px;
@@ -152,18 +154,10 @@
         height: 20px;
         width: 20px;
     }
+
     to {
         height: 0;
         width: 0;
-    }
-}
-
-@keyframes textAppear {
-    from {
-        width: 0;
-    }
-    to {
-        width: 60px;
     }
 }
 
@@ -181,12 +175,14 @@
         margin: 20px auto;
         grid-area: 2/1/3/2;
     }
+
     .emailForm {
         grid-area: 5/1/6/2;
         justify-self: center;
         width: 100%;
         align-items: center;
     }
+
     .linkButtons {
         grid-area: 3/1/4/3;
         align-items: center;
@@ -194,9 +190,11 @@
         justify-content: center;
         margin: 0;
     }
-    .contactLink{
+
+    .contactLink {
         margin: 0 10px;
     }
+
     .sentButton, .sendEmailButton {
         align-self: center;
     }
@@ -206,9 +204,8 @@
     .contactTitle {
         margin-left: 40px;
     }
+
     .contactCard {
         padding: 0;
-        border-top: none;
-
     }
 }
