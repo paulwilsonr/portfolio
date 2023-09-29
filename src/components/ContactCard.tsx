@@ -51,11 +51,14 @@ function ContactCard () {
     const tempValues = { ...formValues }
     tempValues[keyName as keyof typeof tempValues] = newValue
     setFormValues(tempValues)
-    
   }
   return (
     <section id='contact' className='contactCard '>
       <h2 className='sectionTitle contactTitle'>Contact</h2>
+      <p className='contactText'>
+        If you have any questions or just want to chat, please feel free to send
+        me a message and I'll get back to you as soon as i can!
+      </p>
       <div className='linkButtons'>
         <a href='https://github.com/paulwilsonr'>
           <img

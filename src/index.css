@@ -29,26 +29,33 @@
 
 :root {
   --off-white: #f0f0ec;
-  --white: #fff;
-  --black: #000;
-  --blue: #1e81b0;
+  --text-color: #fff;
+  --background-filter: rgba(0, 0, 0, 1);
+  --background-color: #1e81b0;
   --green: #33d17a;
   box-sizing: border-box;
-  font-family: 'Roboto', snas-serif;
+
+  font-family: 'Manrope', snas-serif;
+ 
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  background-color: var(--blue);
+  background-color: var(--background-color);
   color: var(--off-white);
+}
+
+p {
+  line-height: 1.75;
+  letter-spacing: 1px;
 }
 
 
 .backgroundChanger {
   z-index: 1;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: var(--background-filter);
 }
 
 * {
@@ -58,7 +65,7 @@
 
 .sectionTitle {
   margin-left: 50px;
-  margin-top: 40px;
+  padding-top: 40px;
   font-size: 35px;
   font-weight: 200;
 }
@@ -73,7 +80,11 @@ footer {
 }
 
 .footerLink {
-  color: var(--white);
+  color: var(--text-color);
   text-decoration: none;
   font-size: 18px;
+}
+
+@media (max-width: 480px) {
+ 
 }

@@ -1,5 +1,5 @@
 .navBar {
-    background-color: var(--black);
+    background-color: var(--background-filter);
     display: flex;
     justify-content: end;
     padding: 10px 25px;
@@ -15,6 +15,6 @@
 }
 
 .currentSection {
-    color: var(--white);
-    border-bottom: 2px var(--white) solid;
+    color: var(--text-color);
+    border-bottom: 2px var(--text-color) solid;
 }
