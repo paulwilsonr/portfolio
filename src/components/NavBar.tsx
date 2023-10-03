@@ -1,19 +1,43 @@
 import '../styles/navBar.css'
 
-function NavBar () {
+interface navProps {
+  location: string
+}
+
+function NavBar ({ location }: navProps) {
   return (
     <div className='navBar'>
       <nav>
-        <a className='navLink' href='#home'>
+        <a
+          className={
+            location === 'title' ? 'currentSection navLink' : 'navLink'
+          }
+          href='#home'
+        >
           Home
         </a>
-        <a className='navLink' href='#about'>
+        <a
+          className={
+            location === 'about' ? 'currentSection navLink' : 'navLink'
+          }
+          href='#about'
+        >
           About
         </a>
-        <a className='navLink' href='#projects'>
+        <a
+          className={
+            location === 'project' ? 'currentSection navLink' : 'navLink'
+          }
+          href='#projects'
+        >
           Projects
         </a>
-        <a className='navLink' href='#contact'>
+        <a
+          className={
+            location === 'contact' ? 'currentSection navLink' : 'navLink'
+          }
+          href='#contact'
+        >
           Contact
         </a>
       </nav>
