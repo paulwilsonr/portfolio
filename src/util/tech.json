@@ -52,6 +52,12 @@
         "name": "NPM",
         "img": "/assets/icons8-npm-96.png",
         "years": 2
+    },
+    {
+        "id": 10,
+        "name": "TailwindCSS",
+        "img": "/assets/tailwind-css.png",
+        "years": 2
     }
     
 ]

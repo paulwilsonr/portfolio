@@ -16,5 +16,14 @@
         "live": "https://main--peaceful-caramel-10188d.netlify.app/",
         "github": "https://github.com/paulwilsonr/shoppingCart",
         "description": "A front-end store built with Vite. The store allows users to browse, add and remove items from their cart."
+    },
+    {
+        "id": 3,
+        "name": "Task Master",
+        "img":"/assets/TaskManager.png",
+        "techUsed":["Vite", "Typescript", "Tailwind"],
+        "live": "https://main--aesthetic-zabaione-2fbbd9.netlify.app/",
+        "github": "https://github.com/paulwilsonr/todoPage",
+        "description": "A mobile-first To-Do App that uses local storage to store tasks the user inputs"
     }
 ]
