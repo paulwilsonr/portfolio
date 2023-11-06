@@ -25,6 +25,7 @@ const useElementOnScreen = (locationRef: RefObject<HTMLDivElement>) => {
       observer.observe(locationRef.current)
     }
     return () => {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       if (locationRef !== null) observer.unobserve(locationRef.current)
     }
   }, [locationRef])
