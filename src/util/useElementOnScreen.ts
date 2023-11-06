@@ -8,7 +8,11 @@ const options = {
 
 const useElementOnScreen = (locationRef: RefObject<HTMLDivElement>) => {
   const [isIntersecting, setIsIntersecting] = useState(false)
-
+if(window.innerWidth < 480) {
+    options.rootMargin = '100%'
+  } else {
+    options.rootMargin = '20%'
+  }
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
       setIsIntersecting(entry.isIntersecting)
