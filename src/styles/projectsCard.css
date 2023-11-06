@@ -136,8 +136,7 @@
     }
 
     .projectTechUsed {
-        font-size: 18px;
-        margin-bottom: 15px;
+        display: none;
     }
 
     .projectsCard>h2 {

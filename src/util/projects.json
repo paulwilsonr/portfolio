@@ -19,7 +19,7 @@
     },
     {
         "id": 3,
-        "name": "Task Master",
+        "name": "Task Manager",
         "img":"/assets/TaskManager.png",
         "techUsed":["Vite", "Typescript", "Tailwind"],
         "live": "https://main--aesthetic-zabaione-2fbbd9.netlify.app/",
