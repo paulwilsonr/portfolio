@@ -207,5 +207,10 @@
 
     .contactCard {
         padding: 0;
+        grid-template-rows: 120px 1fr;
+    }
+    
+    .contactText {
+        height: fit-content;
     }
 }

@@ -18,3 +18,9 @@
     color: var(--text-color);
     border-bottom: 2px var(--text-color) solid;
 }
+
+@media (max-width: 480px)  {
+    .navLink {
+        font-size: 15px;
+    }
+}

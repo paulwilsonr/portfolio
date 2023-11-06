@@ -1,7 +1,7 @@
 .aboutCard {
     margin: 0px 40px 120px 40px;
     padding-left: 40px;
-    z-index: 10;
+    z-index: 60;
 }
 
 .techIconContainer {
