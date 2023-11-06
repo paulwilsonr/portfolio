@@ -1,27 +1,23 @@
-# React + TypeScript + Vite
+# My Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio website! This website showcases my skills, projects, and experiences. It's designed to provide an overview of who I am, my work, and how to get in touch with me.
+Table of Contents
 
-Currently, two official plugins are available:
+   - [Overview](#overview)
+   - [Features](#features)
+   - [Demo](#demo)
+   
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This portfolio website is designed to help you get to know me better and understand my skills and projects. You can explore various sections to learn about my background, see my latest work, and reach out to me.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+   - Home Page: An introduction to who I am and what I do.
+   - Projects: A showcase of my latest projects, complete with descriptions and links.
+   - Skills: A list of the technologies and skills I'm proficient in.
+   - Contact: How to get in touch with me.
 
-- Configure the top-level `parserOptions` property like this:
+## Demo
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+You can explore the live version of my portfolio website [here](https://paulrwilson.dev).
