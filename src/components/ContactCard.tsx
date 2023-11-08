@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import '../styles/contactCard.css'
+import  DomPurify from 'dompurify'
 
 function ContactCard () {
   const [emailSent, setEmailSent] = useState(false)
@@ -49,7 +50,7 @@ function ContactCard () {
 
   function handleChange (newValue: string, keyName: string) {
     const tempValues = { ...formValues }
-    tempValues[keyName as keyof typeof tempValues] = newValue
+    tempValues[keyName as keyof typeof tempValues] = DomPurify.sanitize(newValue)
     setFormValues(tempValues)
   }
   return (
@@ -108,6 +109,7 @@ function ContactCard () {
           placeholder='Message'
           className='emailInput'
           value={formValues.message}
+          required
           onChange={e => {
             handleChange(e.target.value, 'message')
           }}
